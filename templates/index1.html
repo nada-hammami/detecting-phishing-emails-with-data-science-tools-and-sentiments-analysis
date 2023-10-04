@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home | WhizCyber</title>
+<link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="assets/images/favicons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
+<link rel="manifest" href="assets/images/favicons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="assets/images/favicons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="./assets/css/style.css">
+<link rel="stylesheet" href="./assets/css/mobile.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
+crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+</head>
+<body>
+    <!-- HEADER-SECTION -->
+<div class="home-header-section">
+        <figure class="banner-right-img left_icon img">
+            <img src="./assets/images/header-right-img.png" alt="" class="star">
+        </figure>
+        <header class="header">
+            <div class="main-header">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-expand-lg navbar-light p-0">
+                        <a class="navbar-brand pt-0" href="index.html"><img src="./assets/images/whiz-cyber-logo.png" alt="" class="img-fluid diverge-logo"></a>
+                            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                            <span class="navbar-toggler-icon"></span>
+                            <span class="navbar-toggler-icon"></span>
+                            </button>
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item active">
+                                            <a class="nav-link text-decoration-none navbar-text-color home-margin-top" href="index.html">Home<span class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-decoration-none navbar-text-color" href="about.html">About us</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-decoration-none navbar-text-color" href="services.html">Services</a>
+                                        </li>
+                                        <!-- <li class="nav-item navbar-text-color"><a class="nav-link text-decoration-none contact-us-margin navbar-text-color" href="pricing.html">Pricing</a></li> -->
+                                        <li class="nav-item">
+                                            <a class="nav-link text-decoration-none navbar-text-color" href="contact.html">Contact us</a>
+                                        </li>
+
+                                    </ul>
+
+                                    <div class="btn-talk ml-auto">
+                                        <ul class="m-0 p-0">
+                                            {% if session['username'] %}
+                                                <li class="list-unstyled d-lg-inline-block"><a href="{{ url_for('logout') }}" class="button">log Out</a></li>
+                                                </ul>
+                                                </div>
+                                                <div class="btn-talk ml-auto">
+                                                <ul class="m-0 p-0">
+                                            {% else %}
+                                                <li class="list-unstyled d-lg-inline-block"><a href="{{ url_for('login') }}" class="button">Login</a></li>
+                                                <li class="list-unstyled d-lg-inline-block"><a href="{{ url_for('signup') }}" class="button">Sign Up</a></li>
+
+                                            {% endif %}
+                                            </ul>
+                                            </div>
+
+                                </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- BANNER-SECTION -->
+        <div class="home-banner-section overflow-hidden position-relative">
+            <div class="banner-container-box">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-7 col-md-12 col-sm-12 mb-md-0 mb-4 text-md-left text-center order-lg-1 order-2">
+                            <div class="social-icons position-absolute">
+                                <ul class="list-unstyled">
+                                    <li><a class="text-decoration-none"><i class="fa-brands fa-facebook-f social-networks"></i></a></li>
+                                    <li><a class="text-decoration-none"><i class="fa-brands fa-twitter social-networks"></i></a></li>
+                                    <li><a class="text-decoration-none"><i class="fa-brands fa-instagram social-networks"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="home-banner-text" data-aos="fade-up" id="myContentDIV">
+                                <h1>We Provide <span class="h1-text">Cyber Solutions</span> For Your Security</h1>
+                                <p class="banner-paragraph">This is the next generation of cybersecurity for everyone, featuring a lightweight and intuitive protection system.
+                                    </p>
+                                <div class="banner-btn discover-btn-banner">
+                                    <a href="about.html" class="text-decoration-none">Get Started</a>
+                                    <a href="about.html" class="text-decoration-none play-button">Contact us</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-5 col-md-12 col-sm-12 order-lg-2 order-1">
+                            <div class="banner-img-content position-relative">
+                                <figure class="banner-img mb-0">
+                                    <img class="img-fluid banner-img-width" src="assets/images/1.1.png" alt="">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- OUR-Services-SECTION -->
+    <section class="our-services-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h6 class="heading" data-aos="fade-up">Our Services</h6>
+                    <h2 class="text-center"  data-aos="fade-up-right">Cyber Security Solutions</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="services-content">
+                        <div class="icons-rounded-box "  >
+                            <figure class="mb-0"><img src="./assets/images/3.JPG" style="width: 133%; height: auto; "  alt="">
+                            </figure>
+                        </div>
+                       <div class="services-box">
+                        <h5>Scam Email Detection</h5>
+                        <p class="security-services-p">Scam email detection is an essential skill in today's digital age. To detect a scam email, it's important to pay attention to several key factors.</p>
+                        <a href="about.html" class="text-decoration-none ">Read more</a>
+                       </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="services-content">
+                        <div class="icons-rounded-box">
+                            <figure class="mb-0 icon-color"><img src="./assets/images/20.JPG" style="width: 115%; height: auto; " alt="">
+                            </figure>
+                        </div>
+                        <div class="services-box">
+                            <h5>Cyber Bullying Detection</h5>
+                            <p class="security-services-p">Cyberbullying detection is important for protecting victims, preventing escalation, and addressing a growing problem.</p>
+                            <a href="about.html" class="text-decoration-none ">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="services-content">
+                        <div class="icons-rounded-box">
+                            <figure class="mb-0"><img src="./assets/images/2.JPG" alt="">
+                            </figure>
+                        </div>
+                        <div class="services-box">
+                            <h5>Facial Recognition</h5>
+                        <p class="security-services-p">Facial recognition technology can help reduce cognitive biases by providing an objective approach to identifying individuals</p>
+                        <a href="about.html" class="text-decoration-none ">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="services-content">
+                        <div class="icons-rounded-box">
+                            <figure class="mb-0 icon-color"><img src="./assets/images/4.JPG" style="width: 115%; height: auto; " alt="">
+                            </figure>
+                        </div>
+                        <div class="services-box">
+                            <h5>Fake News Detection</h5>
+                            <p class="security-services-p">Fake news detection is important for preserving democracy, protecting public safety and advancing technology.</p>
+                            <a href="about.html" class="text-decoration-none ">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="services-content">
+                        <div class="icons-rounded-box "  >
+                            <figure class="mb-0"><img src="./assets/images/11.JPG" style="width: 120%; height: auto; "  alt="">
+                            </figure>
+                        </div>
+                       <div class="services-box">
+                        <h5>Malicious URL</h5>
+                        <p class="security-services-p">Malicious URL detection is important for protecting against cyber threats, reducing financial loss and promoting a safer online environment.</p>
+                        <a href="about.html" class="text-decoration-none ">Read more</a>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About-Us-SECTION -->
+<section class="about-us-section overflow-hidden position-relative">
+    <figure class="about-left-back-img">
+        <img src="./assets/images/about-left-background.png" alt="" class="star">
+    </figure>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-5 col-md-12 col-sm-12 order-lg-1 order-2">
+                    <div class="about-content-img" data-aos="fade-up-left">
+                        <figure class="mb-0 about-section-f1"><img src="./assets/images/5.JPG" alt=""></figure>
+                        <figure class="mb-0 about-section-f3" ><img src="./assets/images/6.JPG" style="width: 150%; height: auto; " alt=""></figure>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 order-lg-2 order-2">
+                    <div class="about-us-content aos-init aos-animate" data-aos="fade-up">
+                        <h6 class="autorix-text"  data-aos="fade-up">About us</h6>
+                        <h2  data-aos="fade-up-left">Centralize all cybersecurity solutions in a single platform</h2>      
+                        <p class="aboutus-p" data-aos="fade-up-right">A cybersecurity and data science team consists of professionals with skills in cybersecurity, data analysis, and machine learning. We work together to identify and mitigate security risks and vulnerabilities and develop comprehensive cybersecurity strategies that leverage data and technology. We protect organizations from cyber threats and stay up-to-date with emerging threats and technologies.</p> 
+                        <ul class="list-unstyled list-margin-bottom" data-aos="fade-up-right">
+                            <li class="d-inline-block mb-lg-0 mb-3"><i class="fa-solid fa-check ml-0"></i><span class="d-inline-block email-span text-decoration-none list-span">Protect sensitive data</span></li>
+                            <li class="d-inline-block cloud-security-li"><i class="fa-solid fa-check margin-left-checkk"></i><span class="d-inline-block user-span text-decoration-none list-span">Prevent financial loss</span></li>
+                            <li class="d-inline-block mb-lg-0 mb-3"><i class="fa-solid fa-check ml-0"></i><span class="d-inline-block email-span text-decoration-none list-span">Enhancing productivity</span></li>
+                            <li class="d-inline-block user-li threat-detection-li"><i class="fa-solid fa-check margin-left-checkk"></i><span class="d-inline-block user-span text-decoration-none list-span">Enhancing brand trust</span></li> 
+                               
+                        </ul>
+                        
+                        
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+    <!--partners-section -->
+<div class="partners-section overflow-hidden">
+    <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h6 data-aos="fade-up">Partners</h6>
+                    <h2 class="text-center" data-aos="fade-up-right">We're Working With</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="partners-content" data-aos="fade-up">
+                        <div class="partners-box">
+                            <figure class="mb-0"><img src="./assets/images/1111.png" alt="" >
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="partners-content" data-aos="fade-up">
+                        <div class="partners-box">
+                            <figure class="mb-0 icon-color"><img src="./assets/images/1222.png" alt="" >
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Who-We-Are-Section -->
+<section class="who-we-are-section overflow-hidden">
+    <figure class="who-we-right-fig">
+        <img src="./assets/images/who-we-right.png" alt="" class="star">
+    </figure>  
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 order-lg-1 order-2">
+                    <div class="about-us-content aos-init aos-animate" data-aos="fade-up">
+                        <h6 class="autorix-text" data-aos="fade-up">Who we are</h6>
+                        <h2 data-aos="fade-up-right">Think Before You Click, Don't Let Phishing Emails Reel You In.</h2>      
+                        <p class="aboutus-p">Successful phishing attacks often lead to identity theft, credit card fraud, ransomware attacks, data breaches, and huge financial losses for individuals and corporations.</p> 
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <div class="counter-box">
+                                    <h3 class="counetr-heading"><span class="counter">53</span><span>%</span><span class="plus-counter"></span></h3>
+                                    <p class="counter-text">Business Email Compromises</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <div class="counter-box counter-b2">
+                                    <h3 class="counetr-heading"><span class="counter">49</span><span>%</span><span class="plus-counter"></span></h3>
+                                    <p class="counter-text">Phishing Messages</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <div class="counter-box counter-b3">
+                                    <h3 class="counetr-heading"><span class="counter">47</span><span>%</span><span class="plus-counter"></span></h3>
+                                    <p class="counter-text">Account Compromises</p>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 order-lg-2 order-1">
+                    <div class="who-we-img-content" data-aos="fade-up-right">
+                        <figure class="mb-0 who-we-figure"><img src="./assets/images/8.1.png" style="width: 130%; height: auto; " alt="">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- section2 -->
+    <div class="section-2">
+        <figure class="who-we-right-fig">
+            <img src="./assets/images/section2-before-img.png" alt="" class="star">
+        </figure>  
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12">
+                        <div class="section2-img-content" data-aos="fade-up-right">
+                            <figure class="mb-0 who-we-figure section2-fig"><img src="./assets/images/9.1.png" style="width: 130%; height: auto; " alt="">
+                            </figure>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xl-7 col-lg-6 col-md-12 col-sm-12">
+                        <div class="about-us-content aos-init aos-animate mr-0" data-aos="fade-up">
+                            <h6 class="autorix-text" data-aos="fade-up">What we do</h6>
+                            <h2 data-aos="fade-up-right" class="aos-init aos-animate section2-h2">The Perfect Solution For all Protection</h2>      
+                            <p class="aboutus-p">Our platform offers a user-friendly interface and intuitive design, making it easy and enjoyable for users to navigate and complete tasks efficiently</p> 
+                            <div class="section2-row1">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                       <div class="section-2-content">
+                                        <figure class="section2-figure">
+                                            <img src="./assets/images/section2-list-img.png" alt="">
+                                        </figure>
+                                        <div class="section2-box">
+                                            <h6 class="section2-heading">Performance</h6>
+                                            <p class="section2-text">How fast does the system return results</p>
+                                        </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="section-2-content row2-content">
+                                            <figure class="section2-figure">
+                                                <img src="./assets/images/section2-list-img.png" alt="">
+                                            </figure>
+                                            <div class="section2-box">
+                                                <h6 class="section2-heading">Usability</h6>
+                                                <p class="section2-text"> the appearance of the user interface and how people interact with it                                                </p>
+                                            </div>
+                                           </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="section-2-content">
+                                        <figure class="section2-figure">
+                                            <img src="./assets/images/section2-list-img.png" alt="">
+                                        </figure>
+                                        <div class="section2-box">
+                                            <h6 class="section2-heading">Data integrity</h6>
+                                            <p class="section2-text"> integrity, consistency, and correctness of the data in the application.</p>
+                                        </div>
+                                       </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="section-2-content row2-content">
+                                        <figure class="section2-figure">
+                                            <img src="./assets/images/section2-list-img.png" alt="">
+                                        </figure>
+                                        <div class="section2-box">
+                                            <h6 class="section2-heading">Availability</h6>
+                                            <p class="section2-text"> the system must be available at all times for users as phishing attacks can occur at any moment</p>
+                                        </div>
+                                       </div>
+                                </div>
+                            </div>                                        
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+    <!--PRICING-PLAN_SECTION -->
+    <section class="pricing-plan-section overflow-hidden">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h6 data-aos="fade-up">we offer</h6>
+                    <h2 class="text-center" data-aos="fade-up-right">Our Flexible Pricing Plans</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6 mb-md-5 mb-sm-5 mb-0">
+                    <div class="services-content" data-aos="fade-up">
+                        <h5 class="pricing-plan-h5">Beginner</h5>
+                        <div class="icons-rounded-box">
+                            <figure class="mb-0"><img src="./assets/images/10.JPG" alt="">
+                            </figure>
+                        </div>
+                        <h2 class="pricing-plan-color mb-0">$120
+                        <span class="pricing-free-text">/ Per Month</span></h2>
+                        <ul class="list-unstyled list-margin-bottom">
+                            <li class="d-inline-block mb-lg-0 mb-3"><i class="fa-solid fa-check ml-0"></i><span class="d-inline-block email-span text-decoration-none list-span">10 Days Product Testing</span></li>
+                            <li class="d-inline-block cloud-security-li"><i class="fa-solid fa-check margin-left-checkk"></i><span class="d-inline-block user-span text-decoration-none list-span">Upgrade Anytime Protection</span></li>
+                            <li class="d-inline-block mb-lg-0 mb-3"><i class="fa-solid fa-check ml-0"></i><span class="d-inline-block email-span text-decoration-none list-span">100 Malware Removal</span></li>
+                            <li class="d-inline-block user-li threat-detection-li"><i class="fa-solid fa-check margin-left-checkk"></i><span class="d-inline-block user-span text-decoration-none list-span">Scan Every 08 Hrs</span></li>                            
+                        </ul>
+                        <div class="order-now-btn">
+                            <a href="pricing.html" class="text-decoration-none ">Purchase Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="services-content" data-aos="fade-up">
+                        <h5 class="pricing-plan-h5">Business</h5>
+                        <div class="icons-rounded-box">
+                            <figure class="mb-0"><img src="./assets/images/11.JPG" alt="">
+                            </figure>
+                        </div>
+                        <h2 class="pricing-plan-color mb-0">$180
+                        <span class="pricing-free-text">/ Per Month</span></h2>
+                        <ul class="list-unstyled list-margin-bottom">
+                            <li class="d-inline-block mb-lg-0 mb-3"><i class="fa-solid fa-check ml-0"></i><span class="d-inline-block email-span text-decoration-none list-span">40 Days Product Testing</span></li>
+                            <li class="d-inline-block cloud-security-li"><i class="fa-solid fa-check margin-left-checkk"></i><span class="d-inline-block user-span text-decoration-none list-span">Upgrade Anytime Protection</span></li>
+                            <li class="d-inline-block mb-lg-0 mb-3"><i class="fa-solid fa-check ml-0"></i><span class="d-inline-block email-span text-decoration-none list-span">100 Malware Removal</span></li>
+                            <li class="d-inline-block user-li threat-detection-li"><i class="fa-solid fa-check margin-left-checkk"></i><span class="d-inline-block user-span text-decoration-none list-span">24/7 Live Assistance</span></li>                            
+                        </ul>
+                        <div class="order-now-btn">
+                            <a href="pricing.html" class="text-decoration-none ">Purchase Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="services-content pro-card" data-aos="fade-up">
+                        <h5 class="pricing-plan-h5">Professional</h5>
+                        <div class="icons-rounded-box">
+                            <figure class="mb-0"><img src="./assets/images/12.JPG" alt="">
+                            </figure>
+                        </div>
+                        <h2 class="pricing-plan-color mb-0">$200
+                        <span class="pricing-free-text">/ Per Month</span></h2>
+                        <ul class="list-unstyled list-margin-bottom">
+                            <li class="d-inline-block mb-lg-0 mb-3"><i class="fa-solid fa-check ml-0"></i><span class="d-inline-block email-span text-decoration-none list-span">10 Days Product Testing</span></li>
+                            <li class="d-inline-block cloud-security-li"><i class="fa-solid fa-check margin-left-checkk"></i><span class="d-inline-block user-span text-decoration-none list-span">Upgrade Anytime Protection</span></li>
+                            <li class="d-inline-block mb-lg-0 mb-3"><i class="fa-solid fa-check ml-0"></i><span class="d-inline-block email-span text-decoration-none list-span">100 Malware Removal</span></li>
+                            <li class="d-inline-block user-li threat-detection-li"><i class="fa-solid fa-check margin-left-checkk"></i><span class="d-inline-block user-span text-decoration-none list-span">24/7 Live Assistance</span></li>                            
+                        </ul>
+                        <div class="order-now-btn">
+                            <a href="pricing.html" class="text-decoration-none ">Purchase Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+      <!-- Our-teams-SECTION -->
+<section class="our-teams-section overflow-hidden position-relative">
+    <figure class="who-we-right-fig">
+        <img src="./assets/images/who-we-right.png" alt="" class="star">
+    </figure>
+    <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-5 col-md-12 col-sm-12 order-lg-1 order-2">
+                    <div class="about-us-content aos-init aos-animate" data-aos="fade-up">
+                        <h6 class="autorix-text" data-aos="fade-up">Our team</h6>
+                        <h2 data-aos="fade-up-right" class="aos-init aos-animate">Engineering Team Who are Behind the Security</h2>      
+                        <p class="aboutus-p">Highly motivated Data Science engineering students</p> 
+                        <p class="aboutus-p our-teamp2">Involving Cybersecurity world to our Data science’s passion. Our confidence in this project helps everyone around you feel optimistic.</p>
+                        <p class="aboutus-p our-teamp2">We always do an outstanding job of looking for the most efficient way to accomplish tasks, a trait that benefits the entire team.</p>
+                        <div class="banner-btn discover-btn-banner">
+                            <a href="about.html" class="text-decoration-none">Join Our Team</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg- col-md-12 col-sm-12 order-lg-2 order-1">
+                   <div class="row">
+                       <div class="col-lg-6 col-md-6 col-sm-6">
+                           <figure class="teams-fig">
+                               <img src="./assets/images/aicha.png" style="width: 100%; height: auto; "  alt="">
+                           </figure>
+                           <div class="teams-img-content">
+                            <div class="hover_box_plus">
+                                <ul class="p-0 text-center">
+                                    <li><a href="#" class="text-decoration-none"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="#" class="text-decoration-none"><i class="fa-brands fa-twitter"></i></a></li>
+                                    <li><a href="#" class="text-decoration-none"><i class="fa-brands fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                           <div class="teams-text">
+                            <h5>Aicha Ouali</h5>
+                            <p>DATA SCIENCE STUDENT</p>
+                           </div>
+                           </div>
+                       </div>
+                       <div class="col-lg-6 col-md-6 col-sm-6">
+                        <figure class="teams-fig">
+                            <img src="./assets/images/ichrak.png" style="width: 100%; height: auto; " alt="">
+                        </figure>
+                        <div class="teams-img-content">
+                            <div class="hover_box_plus">
+                                <ul class="p-0 text-center">
+                                    <li><a href="#" class="text-decoration-none"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="#" class="text-decoration-none"><i class="fa-brands fa-twitter"></i></a></li>
+                                    <li><a href="#" class="text-decoration-none"><i class="fa-brands fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                           <div class="teams-text">
+                            <h5>Ichrak Sghaier</h5>
+                            <p>DATA SCIENCE STUDENT</p>
+                           </div>
+                        </div>
+                    </div>
+                   </div>
+                   <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <figure class="teams-fig">
+                            <img src="./assets/images/nabil.png" style="width: 100%; height: auto; " alt="">
+                        </figure>
+                        <div class="teams-img-content">
+                            <div class="hover_box_plus">
+                                <ul class="p-0 text-center">
+                                    <li><a href="#" class="text-decoration-none"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="#" class="text-decoration-none"><i class="fa-brands fa-twitter"></i></a></li>
+                                    <li><a href="#" class="text-decoration-none"><i class="fa-brands fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                           <div class="teams-text">
+                            <h5>Nabil Bettaieb</h5>
+                            <p>DATA SCIENCE STUDENT</p>
+                           </div>
+                           </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                     <figure class="teams-fig">
+                         <img src="./assets/images/nada.png" style="width: 100%; height: auto; " alt="">
+                     </figure>
+                     <div class="teams-img-content">
+                        <div class="hover_box_plus">
+                            <ul class="p-0 text-center">
+                                <li><a href="#" class="text-decoration-none"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="#" class="text-decoration-none"><i class="fa-brands fa-twitter"></i></a></li>
+                                <li><a href="#" class="text-decoration-none"><i class="fa-brands fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                       <div class="teams-text">
+                        <h5>Nada Hammami</h5>
+                        <p>DATA SCIENCE STUDENT</p>
+                       </div>
+                    </div>
+                 </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+<!-- Form-Section -->
+<section class="contact-us-form">
+    <figure class="about-left-back-img">
+        <img src="./assets/images/contact-before-img.png" alt="" class="star">
+    </figure>
+        <div class="container text-center">
+           <div class="row">
+            <div class="col-12">
+                <h6 class="autorix-text text-center">Get Started Now</h6>
+                <h2 class="text-center aos-init aos-animate" data-aos="fade-left">Send us a Message</h2>
+            </div>
+           </div>
+            <form id="form_id" method="post" action="contact-form.php">
+                <div class="contact-us-wrapper">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-12">
+                            <div class="">
+                                <input type="text" name="name" class="form-control input-fill" placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12">
+                            <div class="">
+                                <input type="text" name="phone" class="form-control input-fill" placeholder="Phone">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12">
+                            <div class="col-inner">
+                                <input type="tel" name="email" class="form-control input-fill" placeholder="Email">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="col-inner-msg">
+                                <textarea name="comments" rows="3" placeholder="Message" class="form-control border-none"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-btn">
+                        <button type="submit" class="btn btn-primary">Submit Now</button>
+                    </div>
+            </div>
+        </form>
+    </div>
+</section>
+    <!-- Footer-Section -->
+    <div class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="footer-content1">
+                       <a href="index.html" class="text-decoration-none"><figure><img src="./assets/images/footer-logo.png" alt="" class="img-fluid"></figure></a>
+                        <p class="footer-section-text">Our platfrom aims to investigate email phishing, malicious URLS , fake news  cyberbullying, emotional analysis  and the main aim is to provide an effective and improved way of classifying, filtering, and preventing users from opening and responding to phishing emails.</p>
+                        <ul class="list-unstyled">
+                            <li class="list-item">
+                                <a href="#"><i class="fa-brands fa-facebook-f marginLeft"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter marginLeft"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram marginLeft"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-12 d-lg-block d-none">
+                    <h5 class="footer-link footer-next-list footer-next-list-about">About Us</h5>
+                    <ul class="useful-footer"> 
+                        <li>
+                            <a href="services.html" class="text-decoration-none footer-link-p">
+                                Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pricing.html" class="text-decoration-none footer-link-p">
+                                Pricing
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="text-decoration-none footer-link-p">
+                               About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="our-team.html" class="text-decoration-none footer-link-p">
+                                Our Teams
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./contact.html" class="text-decoration-none footer-link-p">
+                                Contact us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12 d-md-block d-none">
+                    <h5 class="footer-link text-white footer-next-list footer-next-list-contact">Contact Info</h5>
+                    <div class="footer-list footer-link contact-list">
+                        <div class="icon-list-box1">
+                            <ul class="list-unstyled contact-us-ul">
+                                <li class="list-item">
+                                <a href="tel:+4733378901" class="text-decoration-none footer-link-auto">+61 3 8376 6284</a>
+                                <i class="fa fa-phone fa-icon footer-location3"></i>
+                                </li>
+                                <li class="list-item">
+                                <a href="mailto:webmaster@example.com" class="text-decoration-none footer-link-auto">Info@whizcyber.om</a>
+                                <i class="fa fa-envelope fa-icon footer-location2"></i>
+                                </li>
+                                <li class="list-item">
+                                <a class="text-decoration-none footer-link-auto">21 King Street Melbourne,3000, Australia</a>
+                                <i class="fa-solid fa-location-dot footer-location"></i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="footer-list signupbox">
+                        <h4 class="footer-link text-white footer-next-list footer-next-list-signup">Sign up for Newsletter</h4>
+                        <div class="icon-list-box1">
+                            <div class="col-inner">
+                                <input type="tel" name="email" class="form-control input-fill" placeholder="Email Address:">
+                            </div>
+                            <div class="form-btn">
+                                <button type="submit" class="btn btn-primary">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>           
+        </div>
+        <div class="footer-bar text-center">
+            <div class="row">
+                <div class="footer-bar-content w-100">
+                    <p class="text-size-16 mb-0">Whizcyber copyright © 2022. All Rights Reserved.</p>
+                </div>
+            </div>
+       </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/owl.carousel.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/text-animations.js"></script>
+    <script src="assets/js/carousel.js"></script>
+    <script src="assets/js/showhide.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+    <script src="https://unpkg.com/ityped@0.0.10"></script>
+    <script src="./assets/js/type.js"></script>  
+    <script src="assets/js/custom-script.js"></script>
+</body>
+</html>

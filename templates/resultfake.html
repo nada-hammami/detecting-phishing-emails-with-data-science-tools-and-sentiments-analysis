@@ -1,0 +1,43 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result </title>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div id="brandname">
+            Nada
+        </div>
+        <h2>
+            fake real detection
+
+        </h2>
+
+    </div>
+</header>
+<p style="color:blue;font-size:20px;text-align: center;"> <b> Results </b> </p>
+<div class="results">
+
+
+{% if predictions == 1 %}
+<h2 style="color:red;"> fake </h2>
+{% elif predictions == 0 %}
+<h2 style="color:blue;"> Real </h2>
+{% endif %}
+
+
+
+
+</div>
+</body>
+</html>
+

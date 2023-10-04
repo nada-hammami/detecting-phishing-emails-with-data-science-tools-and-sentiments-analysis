@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cyberbullying Detection</title>
+  </head>
+  <body>
+    <h1>Cyberbullying Detection Results</h1>
+    <p>Input text: {{ input_text }}</p>
+    <p>Predictions: {{ predictions }}</p>
+
+    <p style="color:#5d0169;font-size:20px;text-align: center;"><b> Results </b></p>
+    <div class="results">
+      {% if predictions == 1 %}
+        <h2 style="color:#9bff8b;">not_cyberbullying</h2>
+      {% elif predictions == 0 %}
+        <h2 style="color:#ff2929;">cyberbullying</h2>
+      {% endif %}
+    </div>
+  </body>

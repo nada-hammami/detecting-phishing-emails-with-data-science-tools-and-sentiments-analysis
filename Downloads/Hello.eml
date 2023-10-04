@@ -1,0 +1,113 @@
+Delivered-To: nada.hammami@esprit.tn
+Received: by 2002:a05:7300:3107:b0:c2:bae9:db9 with SMTP id c7csp2312009dyd;
+        Mon, 8 May 2023 13:14:29 -0700 (PDT)
+X-Received: by 2002:a2e:22c6:0:b0:2ac:8688:ded3 with SMTP id i189-20020a2e22c6000000b002ac8688ded3mr3191460lji.4.1683576869009;
+        Mon, 08 May 2023 13:14:29 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1683576868; cv=none;
+        d=google.com; s=arc-20160816;
+        b=b72SO6tXmkMm1OmmPxMkpn8UYqsHploaW1nt9f91PxWTg1UmPjZVWJ52vIMoDB77Sq
+         WuxMj7vT+C9i7HtOwVh43HcUDB0iUzU7T64hAwEGbDh53mHh3n/qmiW5cN0OMwGWZf0b
+         WiWyhopmQNaiVdd3t+Dr6qqYHiX1wA0pWp6zELDtvQhwjGJ5V0t96Pag4f8RBqHk1XLs
+         fjKshyRVcy0BAlSnRar075kXUX36oEovKG/TMsQuXMqcIf6rNM3ousq1FIhrtGlPXAwP
+         lV5OLysReWHuIArhGyrAgEjVb9htdmiPIzgNwL7ZsVLAm8+p9noTz6Wc6dhb3gsozp2t
+         Q5ww==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=UmzJTjiGD0lJikWQIxESz78KW8HSNnM692GAUY8lpSo=;
+        b=pTxbzsoWobFu439NIUMn59iXAtw319niK2W1OvSLabLtj1vVFYARr4sUGY9uU7X+1e
+         rzkpzWSJjWYwp8bHtVPXgR+gXTRRi/3RN4i7pt0amzPYZpFG/RMiU8Wcblfl5CRdohgd
+         OcT2DHD6gm/tgvlLdyKNuMWahUMi9UpH26ak4HPB1DisvFvHKOW3w4izPZofr9BnFVCm
+         h7Fdb+oMxer9X/17Hv/SvmClrlY6mv6znCl4IbwFH3STbQBuCM42G2Tci1Ze4++isU/Z
+         GSXznLamyC/wVH0hzSTv/+QDY6r0y39qJVyZQp5rt5GoD0UfH0A64+STMat5ExWHBUx5
+         yHog==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@esprit.tn header.s=googleesprit header.b=WjYhMyOe;
+       spf=pass (google.com: domain of ichrak.sghaier@esprit.tn designates 209.85.220.41 as permitted sender) smtp.mailfrom=ichrak.sghaier@esprit.tn;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=esprit.tn
+Return-Path: <ichrak.sghaier@esprit.tn>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id bi26-20020a05651c231a00b002a157614aa1sor1399770ljb.0.2023.05.08.13.14.28
+        for <nada.hammami@esprit.tn>
+        (Google Transport Security);
+        Mon, 08 May 2023 13:14:28 -0700 (PDT)
+Received-SPF: pass (google.com: domain of ichrak.sghaier@esprit.tn designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@esprit.tn header.s=googleesprit header.b=WjYhMyOe;
+       spf=pass (google.com: domain of ichrak.sghaier@esprit.tn designates 209.85.220.41 as permitted sender) smtp.mailfrom=ichrak.sghaier@esprit.tn;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=esprit.tn
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=esprit.tn; s=googleesprit; t=1683576868; x=1686168868;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=UmzJTjiGD0lJikWQIxESz78KW8HSNnM692GAUY8lpSo=;
+        b=WjYhMyOeNInKgOtUkIzquPpGqHg5Gz/vYY04C59GXsMuA5mMNa8+CLouf3BHMX7cG5
+         EXCWBl2pWxH1bd7dQ7C4Lqc08G+FFlTz8CUwcOzpcPJ20E4U1LrpWyBryKF+AusTqU3e
+         fzIAobzqhUHEwSl6nwZScQzxz3P6EjXbh/wD5PqddERPKCV7eIEJzjurW8onhF+1jxHR
+         YAALyIVHXEFYlnD3QRkVz5HcKPNjnS2TROUzwrquqBMvheJABsthJ8Ct3hSmjTa5IKeE
+         Uf0hZ5TBr5p1Jc+VQrlAiVrG0+URma/gZEh1WlMiYxUOZzYA0Yr9U2zukY3ldiJd+h5G
+         wcvw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20221208; t=1683576868; x=1686168868;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=UmzJTjiGD0lJikWQIxESz78KW8HSNnM692GAUY8lpSo=;
+        b=Zfl4azbRjAwVigsXulwIClHFRYAcNAkDajgw5l7ZIjUNsmN8pxiSrmzH9dkVe6QZvz
+         9jok02C+pZh/dUBrGyBH/RGidp92UAKnpscbkObn4V7U2qwIs6oo5uYO5zSYdttq59jo
+         3Wc70iCz/PJq6IpaLD42jVjIXF6/5Ut4Z/OOXvmAWKHCHtQuiS/duGH7RiYKDeq882mj
+         kMAyG95Z+4ffx5GAMpio7gVAZ/i6WjpxDz1CmWu7wUjE0ZpdTSCBCWLs/Qnoiuy4tkNM
+         zb2clwrz1o5W5AIYkpZWHYPiy2lrYtDK5JN3zJ79uMMxIO+HzvXLqIFMXf8qjF2Qi+ZZ
+         Vv8g==
+X-Gm-Message-State: AC+VfDyJ9EvxW5gJx+PAVvFEeXurfWz8DrvIrA7D28BGJR4g4BFTjVIH
+	6OKtHqRL3Wj3gVhcrmgEHAZ2NQzqnVB2VbVL4lNxMgASJH8z4MgGuCk=
+X-Google-Smtp-Source: ACHHUZ4LYfE1nBwzUB7BS48gqapqmwmHKc5YWhWPmCRfj4YQgvly5IH880coshXNG2hyA6ml4XfqGXbzIS7HM6pYzVY=
+X-Received: by 2002:a2e:9895:0:b0:2a8:c333:1886 with SMTP id
+ b21-20020a2e9895000000b002a8c3331886mr83118ljj.6.1683576867887; Mon, 08 May
+ 2023 13:14:27 -0700 (PDT)
+MIME-Version: 1.0
+From: ichrak sghaier <ichrak.sghaier@esprit.tn>
+Date: Mon, 8 May 2023 21:14:17 +0100
+Message-ID: <CAKy4ZXYgtOq6T-Ldy4D-kWv2gGJj8pLE0rhrrVuis5R-QZrbhA@mail.gmail.com>
+Subject: Hello
+To: nada hammami <nada.hammami@esprit.tn>
+Content-Type: multipart/alternative; boundary="00000000000029b75d05fb34492a"
+
+--00000000000029b75d05fb34492a
+Content-Type: text/plain; charset="UTF-8"
+
+Dear John,
+
+We hope this email finds you well. We are writing to invite you to attend
+our upcoming charity event to benefit the local community. The event will
+be held on Saturday, May 15th at the community center, and will feature a
+silent auction, live music, and delicious food.
+
+All proceeds from the event will go towards supporting local charities that
+provide important services to our community. We would be honored if you
+could join us in this effort to give back to those in need.
+
+Please let us know if you are able to attend by RSVPing to this email. We
+look forward to seeing you there!
+
+Best regards,
+
+The Community Outreach Committee
+
+--00000000000029b75d05fb34492a
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto"><br></div><div dir=3D"auto">Dear John,</div><div dir=3D"a=
+uto"><br></div><div dir=3D"auto">We hope this email finds you well. We are =
+writing to invite you to attend our upcoming charity event to benefit the l=
+ocal community. The event will be held on Saturday, May 15th at the communi=
+ty center, and will feature a silent auction, live music, and delicious foo=
+d.</div><div dir=3D"auto"><br></div><div dir=3D"auto">All proceeds from the=
+ event will go towards supporting local charities that provide important se=
+rvices to our community. We would be honored if you could join us in this e=
+ffort to give back to those in need.</div><div dir=3D"auto"><br></div><div =
+dir=3D"auto">Please let us know if you are able to attend by RSVPing to thi=
+s email. We look forward to seeing you there!</div><div dir=3D"auto"><br></=
+div><div dir=3D"auto">Best regards,</div><div dir=3D"auto"><br></div><div d=
+ir=3D"auto">The Community Outreach Committee</div>
+
+--00000000000029b75d05fb34492a--

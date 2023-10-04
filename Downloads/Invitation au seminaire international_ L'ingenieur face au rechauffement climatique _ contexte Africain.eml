@@ -1,0 +1,226 @@
+Delivered-To: ichrak.sghaier@esprit.tn
+Received: by 2002:a2e:9913:0:0:0:0:0 with SMTP id v19csp693860lji;
+        Sat, 6 May 2023 07:21:53 -0700 (PDT)
+X-Received: by 2002:a7b:ce8f:0:b0:3f2:5641:3d3 with SMTP id q15-20020a7bce8f000000b003f2564103d3mr3270555wmj.3.1683382913782;
+        Sat, 06 May 2023 07:21:53 -0700 (PDT)
+ARC-Seal: i=3; a=rsa-sha256; t=1683382913; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=KLPNKLIrHycfxU3oYHg5YMs474C2ttXTUeRS7Q2dj2bACSHC3lktazq0fImZmepav7
+         LMtODADTLEIBYBJarvIUEDHKHcXiFeGdchB8Iq3SGGG9bOo7EBQnSDMpJt04F4nUqvSI
+         Npufr/sLUx8cFuD1NGiyjjHF7KXJW0UIsQszINW2p/A9zRPv+Bb+12bUuYAmlJZA/Gzp
+         bX6Pa0okxeYnlKf/plkT1KScjOTHiqaQR2xNw/INRiCcTOYERX3BB3IN//LXIRLQVP3v
+         iajKV1U8QvPIhaKcykWJzLg2QG9z+9I24Tufu198iOpEvIfgrtyUFEDb7PloUyU+cbTV
+         rqCg==
+ARC-Message-Signature: i=3; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:list-subscribe:list-archive:list-help:list-post
+         :list-id:mailing-list:precedence:to:subject:message-id:date:from
+         :mime-version:dkim-signature;
+        bh=0ZMWhPAPFcfM1tJQWRGW6/TtPurlY/kl41CU/zp9fkM=;
+        b=wJCzxE0pi0+eX9ykCx40TAx4KnZMB7MN3yN5O3M3CbPxj9KOpq0+pt2K5M3Ew//bRe
+         viQDJAgHCKrJ4IdplrNACD0B3aIH3lmUNkFlu2qjB1E3nyznXzbTCoSfe0o7WDf+x+Eb
+         fvF7ndKNw5t8Ko+7/T/PZ0Cwxr3Yz31JkKlPctPv+1IWMjvkNobVlqH6qe+ihRaLshYN
+         t+I8t2ZstqBYznlmNNEk4ORTVSshv/wN7cDMxCZmwq7kpHLQ5iU9RrxCjRKSOI1NwITo
+         SddR3ai0ztMOVuS7WD3YXsVFf8Y9mayRMV0v75gV9FI4xE9oz6ZDljOi3zsSF9UTfjIF
+         yIKg==
+ARC-Authentication-Results: i=3; mx.google.com;
+       dkim=pass header.i=@esprit.tn header.s=googleesprit header.b=JuEWOp8n;
+       arc=pass (i=2 spf=pass spfdomain=esprit.tn dkim=pass dkdomain=esprit.tn dmarc=pass fromdomain=esprit.tn);
+       spf=pass (google.com: domain of esprit2223-4ds3+bncbc37xf6ovmbrb3ge3gramgqeyzlapfq@esprit.tn designates 209.85.220.69 as permitted sender) smtp.mailfrom=esprit2223-4ds3+bncBC37XF6OVMBRB3GE3GRAMGQEYZLAPFQ@esprit.tn;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=esprit.tn
+Return-Path: <esprit2223-4ds3+bncBC37XF6OVMBRB3GE3GRAMGQEYZLAPFQ@esprit.tn>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id y5-20020a1c4b05000000b003f18e212c0dsor2179533wma.5.2023.05.06.07.21.53
+        for <ichrak.sghaier@esprit.tn>
+        (Google Transport Security);
+        Sat, 06 May 2023 07:21:53 -0700 (PDT)
+Received-SPF: pass (google.com: domain of esprit2223-4ds3+bncbc37xf6ovmbrb3ge3gramgqeyzlapfq@esprit.tn designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@esprit.tn header.s=googleesprit header.b=JuEWOp8n;
+       arc=pass (i=2 spf=pass spfdomain=esprit.tn dkim=pass dkdomain=esprit.tn dmarc=pass fromdomain=esprit.tn);
+       spf=pass (google.com: domain of esprit2223-4ds3+bncbc37xf6ovmbrb3ge3gramgqeyzlapfq@esprit.tn designates 209.85.220.69 as permitted sender) smtp.mailfrom=esprit2223-4ds3+bncBC37XF6OVMBRB3GE3GRAMGQEYZLAPFQ@esprit.tn;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=esprit.tn
+ARC-Seal: i=2; a=rsa-sha256; t=1683382913; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=NXgcW01qHCEZTU5/HZO8U8bLDPV/iegITfz55UHo+l+jOSbjwXTZ4GOACqaGyjH6CZ
+         mVtfUvMfm5WqODa0elwuijjIiOur+6ZYJblulSKwnEf3n2b79sRSJ0HPX6w+ulNnbyAj
+         96ncXsHPo+X75rwhorxeKjnlEMiAxy1ZCeG0YL/uranlBmW7ec7//jPGE4PHUPO+JX5Q
+         DsqWHYIqtClStev71MUnmmt1kV+2YA0z5Ev1C7NftgO5GvLZpd9YPakPmlkiRm/LJr8L
+         dbSgjk5jBfVWiWWDfMgpAcKEj+X++SGkqBZHsKe0mQBw+gWT12zEDw0suGJhj6XFKz8v
+         0kjQ==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:list-subscribe:list-archive:list-help:list-post
+         :list-id:mailing-list:precedence:to:subject:message-id:date:from
+         :mime-version:dkim-signature;
+        bh=0ZMWhPAPFcfM1tJQWRGW6/TtPurlY/kl41CU/zp9fkM=;
+        b=MPmuNU94SZzt8HafeGFCfy/smJ+DAwfWVRkQDbWLULBmSo26/ms03UAUKzP0VkzfRc
+         RTwAqVL7zp6av1ncJvtyDbSprcnfUowrQ5uEdwkBZ6KzwZ1qkT7nVZ5+4un+Jc3SvIHI
+         e3AgTPZJEz24SGEb0D0SpBClzN536KoSmzpx1zdkZ33dClo9dV6LVn9XZjUDI8Sgg6oX
+         ZxyYf3XZWUue3XbTmWx6+AxO2rSS9oy3I45j9o+oxhpSsO+T9Z/yxY5LzhMx2acK4gI3
+         DejeP1A2LgJUq66UXlQ8sw2qq1JB+vX5ax0YfDgotlQfD4BGbvX2DBEHKwGIeXHFnfBM
+         WGYg==
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@esprit.tn header.s=googleesprit header.b=ODshmer9;
+       spf=pass (google.com: domain of esprit-club-gc@esprit.tn designates 209.85.220.41 as permitted sender) smtp.mailfrom=esprit-club-gc@esprit.tn;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=esprit.tn
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=esprit.tn; s=googleesprit; t=1683382913; x=1685974913;
+        h=list-unsubscribe:list-subscribe:list-archive:list-help:list-post
+         :list-id:mailing-list:precedence:x-original-authentication-results
+         :x-original-sender:to:subject:message-id:date:from:mime-version:from
+         :to:cc:subject:date:message-id:reply-to;
+        bh=0ZMWhPAPFcfM1tJQWRGW6/TtPurlY/kl41CU/zp9fkM=;
+        b=JuEWOp8nvyYEDLczvTk/rSAWSXZrHl1e/Gl/OquvB5+bPUzY3VSBcGEqGjM0nfQkMl
+         BFNAw3r43TTokhTKmzKp0Z+MSik1CzzZs6FnCRns8O646npuXZEttpXgDVbuAlXC9wxe
+         /ukZ/43Nm+X4L0ZIETALZ5vTZpEwIf+X5+YY5Ej+LyXFt+DtZELNOdGcXa9W4l+5tGku
+         64Rp64AyT6bDuDnCaRUey16oy1kSsKlLJ6913Tee8r8OImetpS7CRQpzvnOwQcFsYEfl
+         kQSwzqy/UlSubxPsO3SrgR/96V18HzBxgBL1jCC8leUzqswwwgThdaN441CnbyKZzxDh
+         W6IA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20221208; t=1683382913; x=1685974913;
+        h=list-unsubscribe:list-subscribe:list-archive:list-help:list-post
+         :x-spam-checked-in-group:list-id:mailing-list:precedence
+         :x-original-authentication-results:x-original-sender:to:subject
+         :message-id:date:from:mime-version:x-beenthere:x-beenthere
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=0ZMWhPAPFcfM1tJQWRGW6/TtPurlY/kl41CU/zp9fkM=;
+        b=XzQ6TOm2Kip+IXjyTbko0TM8ZBP0BwSCL09Pq7v6+wosnz7Pn0xRvN0RG36F7cRFiK
+         e2JUhC2EKVxKKI8MXbrycWxROfOBIothTD1qwNuMHbxlrQPhKpyqAXi1hXFr4kxa47oh
+         01lcm54kKiAL87Bj/y5O0okdwC3TzGYpu5NjkzPwvOeT0wU2rZqfLFg56uPtnOfXRncP
+         1gHQVifcwkvnvYNrwkyCUoLDqXDa/8UwNW7AHPlJ9u82arkox3MFCHkWCmL3EqpMnQ4R
+         iz1QBh1SQ1L/5v2kDVQAjYvWpemSXP49ZX88R9rjrZNOx+V7+6Pfe9m0nlKeUVsFMkkg
+         ksyA==
+X-Gm-Message-State: AC+VfDw1Pcm/gSumq9hEGC0Je19C6XLteXp31289EzG9Ad+BBK2hR3HO
+	vEy23yZ0av6IbHZJtuC0E/10sgFu
+X-Google-Smtp-Source: ACHHUZ4TIvvqzS9K1D1J8bOG3kzO2s+TKL2nnkvPpboJBCOXSJ/4cYviOMmVFdJ547y0nmI13MIfPg==
+X-Received: by 2002:a50:d0c9:0:b0:50c:845f:a3b1 with SMTP id g9-20020a50d0c9000000b0050c845fa3b1mr1774048edf.5.1683382892681;
+        Sat, 06 May 2023 07:21:32 -0700 (PDT)
+X-BeenThere: esprit2223-4ds3@esprit.tn
+Received: by 2002:a05:6402:6d4:b0:50b:c6d7:3967 with SMTP id
+ n20-20020a05640206d400b0050bc6d73967ls156037edy.0.-pod-prod-00-eu; Sat, 06
+ May 2023 07:21:31 -0700 (PDT)
+X-Received: by 2002:a05:6402:400f:b0:506:beb3:e866 with SMTP id d15-20020a056402400f00b00506beb3e866mr2876367eda.0.1683382890662;
+        Sat, 06 May 2023 07:21:30 -0700 (PDT)
+X-BeenThere: esprit2223-etudiants@esprit.tn
+Received: by 2002:aa7:dcc8:0:b0:50b:c6d7:396a with SMTP id w8-20020aa7dcc8000000b0050bc6d7396als330067edu.0.-pod-prod-01-eu;
+ Sat, 06 May 2023 07:21:29 -0700 (PDT)
+X-Received: by 2002:a17:907:9705:b0:953:1f45:3ced with SMTP id jg5-20020a170907970500b009531f453cedmr4231201ejc.8.1683382888996;
+        Sat, 06 May 2023 07:21:28 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1683382888; cv=none;
+        d=google.com; s=arc-20160816;
+        b=IiWMS+7m3B8tv/jVTnKKY9mK1MKSZ8CMFAh/7y9bZlvbUI6SeXolgH2oq/FusWoIll
+         samlUXE7iJAua2OkjS6KFqk7lL/Lu+/fVsZ5fn2fhy42AJRNpw59+d6w/qqTPPhO9mlf
+         /fP6EQQw6++yIHLUGoh5ECkQjsvhs70/q++S6LeUhK/gOdd0OBM8yqj2WuYh7xth2UdQ
+         WtpoUKPEPlWccqBcUdElSzktu7Hm1vqU4G5OD5ilyqf0gM1kAgWnWO3DUSEXU461gLYB
+         7jIb61L07qXXRGwO2cl75vh3hSsFPvxbedalggzby8DPHxyOvU1uUNQczgYoSnXinpau
+         aFYg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=0ZMWhPAPFcfM1tJQWRGW6/TtPurlY/kl41CU/zp9fkM=;
+        b=LT4d9dPM4pTtoI4bHNaQ06KuIpcrhCpD7wPfJn9nWEW0xIC9NUiKRlad9hv3kgfH/k
+         AnZ6sAQs+QSiRNyKNOrbJg10hOxdpY3mr692rkm+CCl8L0GYpfplxi6wL1a04I3rTtpc
+         Z0A03tvzHciKTx/wEvC7yHfwjpURr6rSLfoDY/qJKzJCLYiR/ZzqkE5eLOaFytFNdMLQ
+         GR2abEsAVw8aHD5NBD/zfCsJPQ5REDT9w/Yg8WFMw0KALOUmS+HVk+Xo7AWDUPp/K3eY
+         IW88od8CPCB3n5Y09QHw6X7wARmmoa3hI9Wepj2hy+hAGaMphgGbKpIedzO+30nUaxJ8
+         5HTg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@esprit.tn header.s=googleesprit header.b=ODshmer9;
+       spf=pass (google.com: domain of esprit-club-gc@esprit.tn designates 209.85.220.41 as permitted sender) smtp.mailfrom=esprit-club-gc@esprit.tn;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=esprit.tn
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id hz7-20020a1709072ce700b0096584e2cd4asor1694995ejc.5.2023.05.06.07.21.28
+        for <Esprit2223-etudiants@esprit.tn>
+        (Google Transport Security);
+        Sat, 06 May 2023 07:21:28 -0700 (PDT)
+Received-SPF: pass (google.com: domain of esprit-club-gc@esprit.tn designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+X-Received: by 2002:a17:907:3686:b0:94f:2852:1d2b with SMTP id
+ bi6-20020a170907368600b0094f28521d2bmr3374231ejc.72.1683382888290; Sat, 06
+ May 2023 07:21:28 -0700 (PDT)
+MIME-Version: 1.0
+From: =?UTF-8?Q?Esprit_Club_G=C3=A9nie_Civil?= <esprit-club-gc@esprit.tn>
+Date: Sat, 6 May 2023 15:23:27 +0100
+Message-ID: <CAJ8OcZdYFPniMmemf6b_r08FRYiLOv-v+iwLtwMfV788HmT5cQ@mail.gmail.com>
+Subject: =?UTF-8?Q?Invitation_au_s=C3=A9minaire_international=3A_L=27ing=C3=A9nieur?=
+	=?UTF-8?Q?_face_au_r=C3=A9chauffement_climatique_=3A_contexte_Africain?=
+To: Esprit2223-etudiants <Esprit2223-etudiants@esprit.tn>, 
+	ESB-2223-Etudiants <ESB-2223-Etudiants@esprit.tn>
+Content-Type: multipart/alternative; boundary="00000000000013f31f05fb071ffe"
+X-Original-Sender: esprit-club-gc@esprit.tn
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@esprit.tn header.s=googleesprit header.b=ODshmer9;       spf=pass
+ (google.com: domain of esprit-club-gc@esprit.tn designates 209.85.220.41 as
+ permitted sender) smtp.mailfrom=esprit-club-gc@esprit.tn;       dmarc=pass
+ (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=esprit.tn
+Precedence: list
+Mailing-list: list Esprit2223-4DS3@esprit.tn; contact Esprit2223-4DS3+owners@esprit.tn
+List-ID: <Esprit2223-4DS3.esprit.tn>
+X-Spam-Checked-In-Group: Esprit2223-etudiants@esprit.tn
+X-Google-Group-Id: 392835773806
+List-Post: <https://groups.google.com/a/esprit.tn/group/Esprit2223-4DS3/post>, <mailto:Esprit2223-4DS3@esprit.tn>
+List-Help: <https://support.google.com/a/esprit.tn/bin/topic.py?topic=25838>, <mailto:Esprit2223-4DS3+help@esprit.tn>
+List-Archive: <https://groups.google.com/a/esprit.tn/group/Esprit2223-4DS3/>
+List-Subscribe: <https://groups.google.com/a/esprit.tn/group/Esprit2223-4DS3/subscribe>,
+ <mailto:Esprit2223-4DS3+subscribe@esprit.tn>
+List-Unsubscribe: <mailto:googlegroups-manage+392835773806+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/a/esprit.tn/group/Esprit2223-4DS3/subscribe>
+
+--00000000000013f31f05fb071ffe
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Chers Espritiens,
+
+Le d=C3=A9partement G=C3=A9nie civil d=E2=80=99ESPRIT en collaboration avec=
+ les clubs
+ENACTUS-EMC et le club G=C3=A9nie Civil ESPRIT lance la deuxi=C3=A8me =C3=
+=89dition de la
+journ=C3=A9e de l'=C3=A9co-construction sous la th=C3=A9matique:
+
+L'ING=C3=89NIEUR FACE AU R=C3=89CHAUFFEMENT CLIMATIQUE : CONTEXTE AFRICAIN
+
+
+Pour confirmer vos participations au s=C3=A9minaire veuillez s'il vous
+pla=C3=AEt remplire ce formulaire
+<https://docs.google.com/forms/d/e/1FAIpQLSdesAvJ1e2RSjgg37pQzdOpY9fc_nYV6m=
+6TkM2qVGDJocZ4zg/viewform?vc=3D0&c=3D0&w=3D1&flr=3D0>
+
+
+Cordialement
+*CLUB G=C3=A9nie Civil Esprit*=E2=96=BA
+
+--00000000000013f31f05fb071ffe
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><font face=3D"times new roman, serif">Chers Espritien=
+s,</font></div><div><span style=3D"color:black"><font face=3D"times new rom=
+an, serif"><br></font></span></div><div><span style=3D"color:black"><font f=
+ace=3D"times new roman, serif">Le d=C3=A9partement G=C3=A9nie civil d=E2=80=
+=99ESPRIT en collaboration avec les clubs ENACTUS-EMC et le club G=C3=A9nie=
+ Civil ESPRIT lance la deuxi=C3=A8me =C3=89dition de la journ=C3=A9e de l&#=
+39;=C3=A9co-construction sous la th=C3=A9matique:=C2=A0</font></span></div>=
+<div><span style=3D"color:black"><font face=3D"times new roman, serif"><br>=
+</font></span></div><div><p class=3D"MsoNormal" style=3D"text-align:left;ma=
+rgin:0cm;line-height:normal"><font face=3D"times new roman, serif">L&#39;IN=
+G=C3=89NIEUR<span style=3D"color:black">=C2=A0FACE AU=C2=A0</span>R=C3=89CH=
+AUFFEMENT<span style=3D"color:black">=C2=A0CLIMATIQUE : CONTEXTE AFRICAIN</=
+span></font></p><p class=3D"MsoNormal" style=3D"text-align:left;margin:0cm;=
+line-height:normal"><font face=3D"times new roman, serif"><span style=3D"co=
+lor:black"><br></span></font></p><p class=3D"MsoNormal" style=3D"text-align=
+:left;margin:0cm;line-height:normal"><font color=3D"#000000" face=3D"times =
+new roman, serif">Pour confirmer vos participations au s=C3=A9minaire veuil=
+lez s&#39;il vous pla=C3=AEt=C2=A0remplire=C2=A0ce=C2=A0<a href=3D"https://=
+docs.google.com/forms/d/e/1FAIpQLSdesAvJ1e2RSjgg37pQzdOpY9fc_nYV6m6TkM2qVGD=
+JocZ4zg/viewform?vc=3D0&amp;c=3D0&amp;w=3D1&amp;flr=3D0" style=3D"">formula=
+ire</a></font></p><p class=3D"MsoNormal" style=3D"text-align:left;margin:0c=
+m;line-height:normal"><font face=3D"times new roman, serif"><br></font></p>=
+<p class=3D"MsoNormal" style=3D"text-align:left;margin:0cm;line-height:norm=
+al"><font face=3D"times new roman, serif">Cordialement=C2=A0</font></p></di=
+v><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmail_signat=
+ure"><div dir=3D"ltr"><div style=3D"font-size:small"><div dir=3D"ltr"><div =
+dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><font color=3D"#888888"><div =
+dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div><font face=3D"comic sans=
+ ms, sans-serif"><b>CLUB=C2=A0G=C3=A9nie Civil Esprit</b><span style=3D"col=
+or:rgb(255,31,23);font-size:medium">=E2=96=BA</span></font></div></div></di=
+v></div></font></div></div></div></div></div></div></div></div>
+
+--00000000000013f31f05fb071ffe--
